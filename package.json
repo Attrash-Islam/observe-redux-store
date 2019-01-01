@@ -1,6 +1,6 @@
 {
   "name": "observe-redux-store",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "observe-redux-store",
   "main": "./dist/index.js",
   "dependencies": {},
@@ -11,6 +11,10 @@
     "uglifyjs-webpack-plugin": "1.0.1",
     "webpack": "2.6.1"
   },
+  "files": [
+    "dist/",
+    "src/"
+  ],
   "scripts": {
     "webpack-build": "webpack ./src/index.js ./dist/index.js --output-library-target=\"umd\"",
     "build": "npm run webpack-build"
