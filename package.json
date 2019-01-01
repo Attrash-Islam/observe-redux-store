@@ -1,0 +1,20 @@
+{
+  "name": "observe-redux-store",
+  "version": "1.0.0",
+  "description": "observe-redux-store",
+  "main": "./dist/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "6.22.1",
+    "babel-loader": "6.2.10",
+    "babel-preset-es2015": "6.22.0",
+    "uglifyjs-webpack-plugin": "1.0.1",
+    "webpack": "2.6.1"
+  },
+  "scripts": {
+    "webpack-build": "webpack ./src/index.js ./dist/index.js --output-library-target=\"umd\"",
+    "build": "npm run webpack-build"
+  },
+  "author": "Islam Attrash <isattrash@gmail.com>",
+  "license": "MIT"
+}
