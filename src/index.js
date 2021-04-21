@@ -4,12 +4,13 @@ export default function observeStore(store, select, onChange) {
      function handleChange() {
         const nextState = select(store.getState());
         if (nextState !== currentState) {
-            onChange(nextState, currentState);
+            const _current = currentState;
             currentState = nextState;
+            onChange(nextState, _current);
         }
     }
 
-     const unsubscribe = store.subscribe(handleChange);
+    const unsubscribe = store.subscribe(handleChange);
     handleChange();
     return unsubscribe;
 }
